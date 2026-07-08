@@ -1,87 +1,675 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
-<title>Agro é Forte</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agrinho | Um Futuro Sustentável</title>
+
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 20px;
-    }
 
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-        text-align: center;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
 
-    img {
-        max-width: 100%;
-        height: auto;
-        margin: 15px 0;
-        border-radius: 10px;
-    }
+html{
+scroll-behavior:smooth;
+}
 
-    ul {
-        display: inline-block;
-        text-align: left;
-    }
+body{
+background:#f3f9ef;
+color:#333;
+}
+
+
+/* CAPA */
+
+header{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(0,70,20,.65),rgba(0,70,20,.65)),
+url("https://images.unsplash.com/photo-1500076656116-558758c991c1");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+color:white;
+text-align:center;
+
+}
+
+
+header h1{
+
+font-size:80px;
+animation:entrada 2s;
+
+}
+
+
+header p{
+
+font-size:28px;
+margin:20px;
+
+}
+
+
+.btn{
+
+background:#81c784;
+color:white;
+
+padding:15px 40px;
+
+border-radius:40px;
+
+border:none;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+.btn:hover{
+
+background:#2e7d32;
+transform:scale(1.1);
+
+}
+
+
+
+/* MENU */
+
+nav{
+
+position:sticky;
+top:0;
+
+background:#145a22;
+
+padding:18px;
+
+text-align:center;
+
+z-index:10;
+
+}
+
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin:15px;
+
+padding:12px 25px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+
+nav a:hover{
+
+background:#66bb6a;
+
+}
+
+
+
+/* SEÇÕES */
+
+section{
+
+padding:70px 10%;
+
+}
+
+
+.titulo{
+
+text-align:center;
+
+font-size:40px;
+
+color:#176b2c;
+
+margin-bottom:35px;
+
+}
+
+
+
+.texto{
+
+font-size:20px;
+
+line-height:1.8;
+
+text-align:center;
+
+}
+
+
+
+/* CARDS */
+
+
+.cards{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+
+.card{
+
+background:white;
+
+width:300px;
+
+padding:30px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 10px 25px #ccc;
+
+transition:.4s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-15px);
+
+}
+
+
+.card h3{
+
+color:#2e7d32;
+
+font-size:25px;
+
+margin-bottom:15px;
+
+}
+
+
+
+/* DESTAQUE */
+
+
+.destaque{
+
+background:#2e7d32;
+
+color:white;
+
+padding:50px;
+
+border-radius:35px;
+
+text-align:center;
+
+}
+
+
+.destaque h2{
+
+font-size:35px;
+
+}
+
+
+/* CONTADOR */
+
+
+.contador{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+}
+
+
+.numero{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 5px 15px #ccc;
+
+text-align:center;
+
+font-size:35px;
+
+color:#2e7d32;
+
+}
+
+
+
+/* GALERIA */
+
+
+.galeria{
+
+display:flex;
+
+gap:20px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+
+.galeria img{
+
+width:280px;
+
+height:200px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+transition:.4s;
+
+}
+
+
+.galeria img:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+background:#124d20;
+
+color:white;
+
+padding:30px;
+
+text-align:center;
+
+}
+
+
+
+/* TOPO */
+
+
+#topo{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+display:none;
+
+border-radius:50%;
+
+width:55px;
+
+height:55px;
+
+background:#2e7d32;
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+font-size:22px;
+
+}
+
+
+
+/* ANIMAÇÃO */
+
+
+@keyframes entrada{
+
+from{
+
+opacity:0;
+transform:translateY(-50px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
 </style>
+
 </head>
+
+
 <body>
 
-<div class="container">
 
 <header>
-    <h2>🌱 Agro é Forte</h2>
+
+<h1>🌱 Agrinho</h1>
+
+<p>
+Educação, agricultura e sustentabilidade
+</p>
+
+<button class="btn" onclick="irSobre()">
+Conheça o projeto
+</button>
+
 </header>
 
-<img src="https://img.magnific.com/fotos-gratis/caminhao-trabalhando-no-campo-durante-um-dia-ensolarado_23-2151976947.jpg?semt=ais_hybrid&w=400&q=80" alt="Campo agrícola">
 
-<h2>O que é o Agro?</h2>
-<p>
-O agro faz parte do nosso dia a dia muito mais do que imaginamos. Ele reúne todas as atividades ligadas à produção de alimentos e matérias-primas, desde o plantio no campo até os produtos que chegam à nossa mesa. Graças ao trabalho de agricultores, pecuaristas e diversos profissionais, temos acesso a alimentos frescos e de qualidade todos os dias.
+
+<nav>
+
+<a href="#sobre">Sobre</a>
+
+<a href="#importancia">Importância</a>
+
+<a href="#acoes">Ações</a>
+
+<a href="#galeria">Galeria</a>
+
+</nav>
+
+
+
+<section id="sobre">
+
+
+<h2 class="titulo">
+Sobre o Agrinho
+</h2>
+
+
+<p class="texto">
+
+O Agrinho é um projeto educativo que aproxima estudantes
+dos conhecimentos sobre agricultura, meio ambiente e cidadania.
+Ele mostra que atitudes simples podem ajudar a construir um futuro melhor.
+
 </p>
 
-<img src="https://i.pinimg.com/736x/06/e6/95/06e695aeecf7f2a16aa78ab00f6f53e6.jpg" width="500" height="300" alt="Imagem">
 
-<h2>Importância</h2>
-<p>
-O agronegócio é um dos pilares da economia brasileira. Além de produzir alimentos para milhões de pessoas, o setor gera empregos, movimenta o comércio e contribui para o desenvolvimento de várias regiões do país. O trabalho realizado no campo é fundamental para garantir o abastecimento e melhorar a qualidade de vida da população.
-</p>
+</section>
 
-<img src="https://i.pinimg.com/originals/77/dc/c8/77dcc825e146e43ed28fa9598b720a81.jpg" width="500" height="300" alt="Imagem">
 
-<h2>Exemplos</h2>
-<p>O agro está presente em diversas atividades, como:</p>
 
-<img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?fm=jpg&q=60&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWdyb3xlbnwwfHwwfHx8MA%3D%3D" alt="Campo agrícola">
+<section id="importancia">
 
-<ul>
-    <li>Plantação de soja, milho, café e outras culturas.</li>
-    <li>Criação de gado, suínos e aves.</li>
-    <li>Produção de leite, carne, ovos e mel.</li>
-    <li>Uso de máquinas modernas, como tratores e colheitadeiras.</li>
-    <li>Sistemas de irrigação que ajudam no cultivo das lavouras.</li>
-</ul>
+
+<h2 class="titulo">
+Por que é importante?
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>🌎 Meio Ambiente</h3>
 
 <p>
-Em resumo, o agro é responsável por produzir alimentos, gerar empregos e impulsionar a economia, mostrando a força do campo para o crescimento do Brasil. 🚜🌾👨‍🌾
+Ensina a proteger a natureza e usar os recursos de forma consciente.
 </p>
 
 </div>
 
+
+<div class="card">
+
+<h3>🚜 Agricultura</h3>
+
+<p>
+Valoriza o trabalho dos produtores rurais e a produção de alimentos.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>📚 Educação</h3>
+
+<p>
+Forma alunos mais conscientes e preparados para o futuro.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section>
+
+<div class="destaque">
+
+<h2>
+Pequenas atitudes mudam o mundo 🌎
+</h2>
+
+<p>
+A sustentabilidade começa dentro de casa, na escola e na comunidade.
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<section id="acoes">
+
+
+<h2 class="titulo">
+Nossas ações
+</h2>
+
+
+<div class="contador">
+
+<div class="numero">
+
+🌳
+<br>
++100
+<br>
+Árvores
+
+</div>
+
+
+<div class="numero">
+
+♻️
+<br>
++500
+<br>
+Reciclagens
+
+</div>
+
+
+<div class="numero">
+
+💧
+<br>
++200
+<br>
+Economias
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<section id="galeria">
+
+
+<h2 class="titulo">
+Galeria
+</h2>
+
+
+<div class="galeria">
+
+
+<img src="https://images.unsplash.com/photo-1492496913980-501348b61469">
+
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
+
+<img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30">
+
+
+</div>
+
+
+</section>
+
+
+
+<footer>
+
+Projeto Agrinho 🌱  
+<br>
+Educação e Sustentabilidade
+
+</footer>
+
+
+
+<button id="topo" onclick="voltar()">
+⬆
+</button>
+
+
+
+<script>
+
+
+function irSobre(){
+
+document.getElementById("sobre")
+.scrollIntoView();
+
+}
+
+
+
+window.onscroll=function(){
+
+let b=document.getElementById("topo");
+
+if(window.scrollY>400){
+
+b.style.display="block";
+
+}else{
+
+b.style.display="none";
+
+}
+
+}
+
+
+
+function voltar(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+
+</script>
+
+
 </body>
-</html><style>
-    header {
-        background-image: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        padding: 40px;
-        border-radius: 10px;
-        text-shadow: 2px 2px 4px black;
-        margin-bottom: 20px;
-    }
-    </style>
+
+</html>
+```
